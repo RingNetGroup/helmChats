@@ -1,0 +1,16 @@
+namespace: ringlink-operator
+deployment:
+  name: ringlink-operator
+  replicas: 1
+image:
+  repository: registry.ringlink.dev/pub/ringlink-operator
+  tag: latest
+  pullPolicy: Always
+#imagePullSecrets: ""
+resources:
+  limits:
+    cpu: 200m
+    memory: 128Mi
+  requests:
+    cpu: 10m
+    memory: 64Mi
