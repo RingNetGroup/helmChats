@@ -17,4 +17,6 @@ jobs:
           fetch-depth: 0
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.7.0
+        env:
+          CR_TOKEN: "${{ secrets.saka_pat }}"
 
