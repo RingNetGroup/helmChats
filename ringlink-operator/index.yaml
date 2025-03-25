@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2025-03-21T17:00:46.417624+08:00"
+entries:
+  ringlink-operator:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-03-25T17:58:30.448666+08:00"
+    description: A Helm chart for Kubernetes
+    digest: cf11190f0a39492d10cca36135a464aa95d087b7939d31bcd60bae866dcef661
+    name: ringlink-operator
+    type: application
+    urls:
+    - https://ringnetgroup.github.io/helmChats/ringlink-operator/charts/ringlink-operator-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-03-25T17:58:30.448162+08:00"
