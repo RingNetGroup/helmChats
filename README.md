@@ -1,4 +1,4 @@
 # helmChats
 It will auto pack charts/XXX and push to release and build pages/refresh helm repo index
-## Warn
+## Warning
 This repo is PUBLIC!!!
