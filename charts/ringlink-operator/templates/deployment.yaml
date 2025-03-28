@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ringlink-operator
-  namespace: {{ .Values.namespace }}
   labels:
     app.kubernetes.io/name: ringlink-operator
 spec:
@@ -27,6 +26,11 @@ spec:
           - --health-probe-bind-address=:8081
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         name: manager
+        env:
+          - name: PROXY_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
         ports: []
         securityContext:
           allowPrivilegeEscalation: false

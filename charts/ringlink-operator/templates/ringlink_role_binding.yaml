@@ -5,7 +5,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: ringlink-proxy
-    namespace: ringlink
+    namespace: '{{ .Release.Namespace }}'
 roleRef:
   kind: ClusterRole
   name: ringlink-role
