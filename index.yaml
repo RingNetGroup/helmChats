@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  ringlink-lb:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2025-04-08T10:57:36.591912811Z"
+    description: A Helm chart for RingLink Kubernetes Integration
+    digest: be6278a64ef982123da5781fd82d98f7b409b12c505ee889be94c8fa63f90aef
+    name: ringlink-lb
+    type: application
+    urls:
+    - https://github.com/RingNetGroup/helmChats/releases/download/ringlink-lb-0.1.1/ringlink-lb-0.1.1.tgz
+    version: 0.1.1
   ringlink-operator:
   - apiVersion: v2
     appVersion: 0.2.0
@@ -31,4 +42,4 @@ entries:
     urls:
     - https://github.com/RingNetGroup/helmChats/releases/download/ringlink-operator-0.1.0/ringlink-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-28T08:02:45.542586253Z"
+generated: "2025-04-08T10:57:36.693212252Z"
