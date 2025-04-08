@@ -1,0 +1,18 @@
+metricsService:
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+    targetPort: 8443
+  type: ClusterIP
+image:
+  repository: ringlink/ringlink-lb-operator
+  tag: v0.1.1
+  pullPolicy: IfNotPresent
+resources:
+  limits:
+    cpu: 200m
+    memory: 128Mi
+  requests:
+    cpu: 10m
+    memory: 64Mi
