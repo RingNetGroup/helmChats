@@ -8,7 +8,7 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: ringlink-operator-leader-election-role
+  name: {{ include "ringlink-operator.fullname" . }}-ringlink-operator-leader-election-role
 subjects:
 - kind: ServiceAccount
   name: ringlink-operator-sa
