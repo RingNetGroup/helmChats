@@ -14,6 +14,16 @@ entries:
   ringlink-operator:
   - apiVersion: v2
     appVersion: 0.2.0
+    created: "2025-05-27T05:10:15.010404089Z"
+    description: A Helm chart for Kubernetes
+    digest: 52705532728346d91c35ec98a70b0e23edf16a4b82d145aa1eedd6a0ed7bc76d
+    name: ringlink-operator
+    type: application
+    urls:
+    - https://github.com/RingNetGroup/helmChats/releases/download/ringlink-operator-0.2.1/ringlink-operator-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 0.2.0
     created: "2025-03-28T08:02:45.542577957Z"
     description: A Helm chart for Kubernetes
     digest: 6908a1e77890675445abf1ecfc329789507af39eda06efe04cdeca67aff98a34
@@ -42,4 +52,4 @@ entries:
     urls:
     - https://github.com/RingNetGroup/helmChats/releases/download/ringlink-operator-0.1.0/ringlink-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-08T10:57:36.693212252Z"
+generated: "2025-05-27T05:10:15.01043106Z"
