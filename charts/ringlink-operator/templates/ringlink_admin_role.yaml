@@ -11,7 +11,7 @@ metadata:
   labels:
     app.kubernetes.io/name: ringlink-operator
     app.kubernetes.io/managed-by: kustomize
-  name: {{ include "ringlink-lb.fullname" . }}-ringlink-admin-role
+  name: {{ include "ringlink-operator.fullname" . }}-ringlink-admin-role
 rules:
 - apiGroups:
   - ring.link

@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: ringlink-operator
     app.kubernetes.io/managed-by: kustomize
-  name: {{ include "ringlink-lb.fullname" . }}-ringlink-operator-leader-election-role
+  name: {{ include "ringlink-operator.fullname" . }}-ringlink-operator-leader-election-role
 rules:
 - apiGroups:
   - ""

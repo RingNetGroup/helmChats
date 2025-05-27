@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "ringlink-lb.fullname" . }}-ringlink-operator
+  name: {{ include "ringlink-operator.fullname" . }}-ringlink-operator
   labels:
     app.kubernetes.io/name: ringlink-operator
 spec:
