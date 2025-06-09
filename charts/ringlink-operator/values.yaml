@@ -4,7 +4,7 @@ deployment:
   replicas: 1
 image:
   repository: ringlink/ringlink-operator
-  tag: v0.2.1
+  tag: v0.2.2
   pullPolicy: Always
 #imagePullSecrets: ""
 resources:
