@@ -31,6 +31,10 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.namespace
+          - name: POD_IMG
+            value: "{{ .Values.image.podImage }}"
+          - name: SIDECAR_SIDECAR_
+            value: "{{ .Values.image.sidecarImage }}"
         ports: []
         securityContext:
           allowPrivilegeEscalation: false

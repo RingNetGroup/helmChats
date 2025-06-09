@@ -6,6 +6,8 @@ image:
   repository: ringlink/ringlink-operator
   tag: v0.2.2
   pullPolicy: Always
+  podImage: "ringlink/ringlink-lite:latest"
+  sidecarImage: "busybox:latest"
 #imagePullSecrets: ""
 resources:
   limits:
