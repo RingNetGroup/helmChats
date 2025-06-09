@@ -14,6 +14,16 @@ entries:
   ringlink-operator:
   - apiVersion: v2
     appVersion: 0.2.3
+    created: "2025-06-09T07:13:12.029712215Z"
+    description: Ringlink Operator
+    digest: 96ad7f87f7ca5de36787c74e63060d277fe8d0441752b11412d26e7950174d42
+    name: ringlink-operator
+    type: application
+    urls:
+    - https://github.com/RingNetGroup/helmChats/releases/download/ringlink-operator-0.2.7/ringlink-operator-0.2.7.tgz
+    version: 0.2.7
+  - apiVersion: v2
+    appVersion: 0.2.3
     created: "2025-06-09T07:04:11.66367242Z"
     description: Ringlink Operator
     digest: e7392b9b70afd55ceaeb4acf98c2959326bd36799b375834ae521088a1e14706
@@ -102,4 +112,4 @@ entries:
     urls:
     - https://github.com/RingNetGroup/helmChats/releases/download/ringlink-operator-0.1.0/ringlink-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-09T07:04:11.6637048Z"
+generated: "2025-06-09T07:13:12.029755726Z"
