@@ -1,5 +1,5 @@
 apiVersion: v2
-name: combined-project
+name: ringlink-k8s
 version: 0.1.0
 dependencies:
   - name: ringlink-operator
