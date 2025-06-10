@@ -1,0 +1,9 @@
+dependencies:
+- name: ringlink-operator
+  repository: file://charts/ringlink-operator
+  version: 0.2.8
+- name: ringlink-lb
+  repository: file://charts/ringlink-lb
+  version: 0.1.4
+digest: sha256:1b4105fd54c8bd45130aa0d45855b11537d434f6d2485663aa32640f6141a71a
+generated: "2025-06-10T19:11:18.970008+08:00"

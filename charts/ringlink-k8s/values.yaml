@@ -1,0 +1,44 @@
+# The values will override the valuse.yaml in subcharts.
+ringlink-operator:
+  enabled: true
+  deployment:
+    name: ringlink-operator
+    replicas: 1
+  image:
+    repository: ringlink/ringlink-operator
+    tag: v0.2.3
+    pullPolicy: IfNotPresent
+    # If can't pull image, change the image address.
+    podImage: "ringlink/ringlink-lite:latest"
+    sidecarImage: "busybox:latest"
+  resources:
+    limits:
+      cpu: 200m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
+
+ringlink-lb:
+  enabled: true
+  metricsService:
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+      targetPort: 8443
+    type: ClusterIP
+  image:
+    repository: ringlink/ringlink-lb-operator
+    tag: v0.1.2
+    pullPolicy: IfNotPresent
+    # If can't pull image, change the image address.
+    podImage: "ringlink/ringlink-lite:latest"
+    sidecarImage: "busybox:latest"
+  resources:
+    limits:
+      cpu: 200m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi

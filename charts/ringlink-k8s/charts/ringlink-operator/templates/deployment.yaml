@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "ringlink-operator.fullname" . }}-ringlink-operator
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: ringlink-operator
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ringlink-operator
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: ringlink-operator
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+      - command:
+        - /manager
+        args:
+          - --leader-elect
+          - --health-probe-bind-address=:8081
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        name: manager
+        env:
+          - name: PROXY_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: POD_IMG
+            value: "{{ .Values.image.podImage }}"
+          - name: SIDECAR_IMG
+            value: "{{ .Values.image.sidecarImage }}"
+        ports: []
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - "ALL"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8081
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 8081
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        resources:
+          limits:
+            cpu: 500m
+            memory: 128Mi
+          requests:
+            cpu: 10m
+            memory: 64Mi
+        volumeMounts: []
+      volumes: []
+      serviceAccountName: ringlink-operator-sa
+      terminationGracePeriodSeconds: 10

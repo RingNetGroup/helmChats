@@ -1,0 +1,18 @@
+namespace: ringlink-operator
+deployment:
+  name: ringlink-operator
+  replicas: 1
+image:
+  repository: ringlink/ringlink-operator
+  tag: v0.2.3
+  pullPolicy: Always
+  podImage: "ringlink/ringlink-lite:latest"
+  sidecarImage: "busybox:latest"
+#imagePullSecrets: ""
+resources:
+  limits:
+    cpu: 200m
+    memory: 128Mi
+  requests:
+    cpu: 10m
+    memory: 64Mi

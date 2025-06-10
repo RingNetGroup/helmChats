@@ -1,0 +1,14 @@
+apiVersion: v2
+name: combined-project
+version: 0.1.0
+dependencies:
+  - name: ringlink-operator
+    version: "0.2.8"
+    repository: "file://charts/ringlink-operator"
+    condition: ringlink-operator.enabled
+
+  - name: ringlink-lb
+    version: "0.1.4"
+    repository: "file://charts/ringlink-lb"
+    condition: ringlink-lb.enabled
+
