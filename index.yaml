@@ -1,5 +1,22 @@
 apiVersion: v1
 entries:
+  combined-project:
+  - apiVersion: v2
+    created: "2025-06-10T11:22:34.852879924Z"
+    dependencies:
+    - condition: ringlink-operator.enabled
+      name: ringlink-operator
+      repository: file://charts/ringlink-operator
+      version: 0.2.8
+    - condition: ringlink-lb.enabled
+      name: ringlink-lb
+      repository: file://charts/ringlink-lb
+      version: 0.1.4
+    digest: c151ed1068ab4d61b586f37fe8e8a609a4d8b9a4f212f369d193554f2062ade7
+    name: combined-project
+    urls:
+    - https://github.com/RingNetGroup/helmChats/releases/download/combined-project-0.1.0/combined-project-0.1.0.tgz
+    version: 0.1.0
   ringlink-lb:
   - apiVersion: v2
     appVersion: 0.1.2
@@ -132,4 +149,4 @@ entries:
     urls:
     - https://github.com/RingNetGroup/helmChats/releases/download/ringlink-operator-0.1.0/ringlink-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-09T11:03:30.235216823Z"
+generated: "2025-06-10T11:22:34.852905953Z"
